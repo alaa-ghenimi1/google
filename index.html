@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Club ISET Béja</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Lien vers Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Styles généraux */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853);
+            background-size: 400% 400%;
+            animation: gradientBG 6s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Logo */
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* Titre */
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Conteneur des liens */
+        .social-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Styles des icônes et des liens */
+        .social-links a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            color: white;
+            font-size: 32px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .facebook { background: #3b5998; }
+        .whatsapp { background: #25D366; }
+        .email { background: #D44638; }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Nom sous chaque icône */
+        .social-links a span {
+            position: absolute;
+            bottom: -25px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ajout du logo -->
+    <img src="logo (2).png" alt="Google Club ISET Béja" class="logo">
+
+    <h1>Welcome to ISET Béja Google Club</h1>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100076275701656" class="facebook" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+        </a>
+        <a href="https://wa.me/21622912406" class="whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="mailto:clubg228@gmail.com?subject=Contact Google Club ISET Béja" class="email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Gmail</span>
+        </a>
+    </div>
+    <br>
+    <br>
+    
+    <div id="qrcode"></div>
+    <script>
+      var qrcode = new QRCode(document.getElementById("qrcode"), {
+          text: "http://127.0.0.1:5500/index.html",
+          width: 200,
+          height: 200
+      });
+  </script>
+  
+    
+
+
+</body>
+</html>
